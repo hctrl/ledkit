@@ -1,0 +1,16 @@
+body {
+  background: black;
+}
+
+#leds {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.led {
+  height: 5px;
+  width: 5px;
+  margin: 25px 0;
+  background: currentColor;
+  box-shadow: 0 0 15px 1px currentColor;
+}
