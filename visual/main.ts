@@ -16,7 +16,8 @@ const ledkit = new Ledkit(length)
 // @ts-expect-error for debugging
 window.ledkit = ledkit
 
-ledkit.leds = gradient(["#ff00ff", "#0ff"].map(Convert.hex.rgb), ledkit.length).map(Convert.rgb.int)
+const gradientColors = ["#ff00ff", "#ff0"].map(Convert.hex.rgb)
+ledkit.leds = gradient(gradientColors, ledkit.length).map(Convert.rgb.int)
 ledkit.attach(strip.render)
 
 new Button("attach", () => ledkit.attach(strip.render))
